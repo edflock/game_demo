@@ -1,0 +1,41 @@
+<!-- This is the main page that needs to be present in any game -->
+<!doctype html>
+<html>
+<head>
+    <title>Quiz gadget</title>
+</head>
+<body>
+	<div class="question"></div>
+	<div class="answers"><div id="addmore">Add More</div></div>
+	<div id="save">Save</div>
+	<script src="bower_components/eventEmitter/EventEmitter.min.js"></script>
+	<script src="../game_api/edflock_game_api.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript">
+	var game = new EdFlockGameAPI();
+	var question=[];
+	var initquest = 1;
+
+	function on_edit_init(){
+		$("#addmore").show();
+	}
+	$("#addmore").on('click',function(){
+		$(".answers").append('<div class="option"><input type="text" class="opt" placeholder="Enter Option"></div>');
+	});
+
+	game.event.addListener('complete_edit',on_edit_end);
+
+	$("#save").on('click',function(){
+		on_edit_end();
+	});
+	function on_edit_end(){
+		$('.answers > .option').each(function () { 
+			question.push( $(this).find('.opt').val() );
+		});
+		console.log(question);
+	}
+	function on_game_init(){
+
+	}
+	</script>
+</body>

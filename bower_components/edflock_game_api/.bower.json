@@ -1,0 +1,34 @@
+{
+  "name": "edflock_game_api",
+  "homepage": "https://github.com/edflock/game_api",
+  "authors": [
+    "Utkarsh Shukla <utk.shukla@gmail.com>"
+  ],
+  "description": "This is the package for edflock game api",
+  "main": "edflock_game_api.js",
+  "keywords": [
+    "edflock"
+  ],
+  "dependencies": {
+    "eventEmitter": "~4.2.7",
+    "underscore": "~1.6.0",
+    "normalize-css": "~3.0.1"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "441bfe6955",
+  "_resolution": {
+    "type": "branch",
+    "branch": "0.0.1",
+    "commit": "441bfe69558ca9ddde6369b2d1eaeec1a26ac9f6"
+  },
+  "_source": "git://github.com/edflock/game_api.git",
+  "_target": "0.0.1",
+  "_originalSource": "edflock_game_api"
+}
